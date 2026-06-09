@@ -3,7 +3,7 @@
 
 #define SCHEMA_VERSION 2
 
-mqtt_manager::mqtt_manager(WiFiClient& espClient) : mqttClient(espClient) {}
+mqtt_manager::mqtt_manager(WiFiClientSecure& espClient) : mqttClient(espClient) {}
 
 void mqtt_manager::begin(const String& deviceID, const String& deviceTopic)
 {

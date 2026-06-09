@@ -2,8 +2,8 @@ import json
 import paho.mqtt.client as mqtt
 import psycopg2
 
-MQTT_HOST = "broker"
-MQTT_PORT = 1883
+MQTT_HOST = "156.17.45.84"
+MQTT_PORT = 8883
 MQTT_TOPIC = "lab/+/+/+"
 
 DB_HOST = "database"

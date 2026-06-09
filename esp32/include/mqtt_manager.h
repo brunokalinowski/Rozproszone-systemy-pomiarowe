@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <WiFi.h>
+#include <WiFiClientSecure.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 
@@ -15,7 +16,7 @@ class mqtt_manager
   uint seq_status_counter;
 
 public:
-  mqtt_manager(WiFiClient &espClient);
+  mqtt_manager(WiFiClientSecure &espClient);
   void begin(const String &deviceID, const String &deviceTopic);
   void connectMQTT();
   void publishMeasurement(const String &sensor, float value, const String &unit, long long ts_ms);
